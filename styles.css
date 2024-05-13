@@ -1,0 +1,856 @@
+
+html {
+    scroll-behavior: smooth; /*scroll effect when u click nav*/
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 80px; 
+    background: #859BA4;
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+    font-size: 16pt;
+}
+
+/*-----------navigation-----------*/
+.section0 {
+    padding-top: 100px; 
+    margin-top: -100px; 
+}
+
+.header {
+    position: fixed; /* sticky header */
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; /* header is on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    border-bottom: 1px solid rgba(247, 247, 230, 0.7); 
+    backdrop-filter: blur(8px); 
+}
+
+.logo {
+    color: #23201F;
+    font-size: 35px;
+    margin-left: 150px;   
+    font-family: 'Abhaya Libre', serif;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    margin-left: 45px;
+}
+
+.navigation a {
+    color: #F7F7E6;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.navigation {
+    margin-right: -370px;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
+}
+
+
+/* Change Background Color button */
+#changeColorButton {
+    padding: 7px 10px;          
+    background: linear-gradient(145deg, #ff8c00, #ff5500); /* Gradient background */
+    color: #F7F7E6;
+    border: none;                 
+    border-radius: 10px;                  
+    cursor: pointer;             
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    outline: none;                  
+}
+
+#changeColorButton:hover {
+    background: linear-gradient(145deg, #ff5500, #ff8c00); /* Inverted gradient on hover */
+}
+
+#changeColorButton:active {
+    background: #ff5500; 
+    transform: translateY(2px); /* Slight push down effect on click */
+}
+
+
+/*--------------section 1 Introduction--------------*/
+.section1 {
+    margin-top: 130px;
+}
+
+/*ticker wrapper*/
+.tickerwrapper {
+    position: relative;
+    left: 0%;
+    background: #859BA4;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: -10px;
+}
+
+ul.list {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;  /* items line up horizontally */
+    will-change: transform;
+}
+
+ul.list li {
+    float: left;
+    padding-left: 40px;
+    font-size: 180px;
+    color: #F7F7E6;
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 100%; 
+    display: flex;
+    margin-top: -180px;
+    margin-bottom: 130px;
+    justify-content: center;
+    overflow: hidden; /* Adds clipping to the container if the image is too tall */
+    z-index: 10; /* lays over the text */
+}
+
+.centered-image {
+    display: block;
+    width: 40%; 
+    height: auto;
+}
+
+.text-content {
+    position: absolute;
+    top: 69%; 
+    left: 28%;
+    transform: translate(-50%, -50%); 
+    color: #F7F7E6;
+    text-align: left;
+    z-index: 11; /* text is on top of the image */
+}
+.text-content h2 {
+    font-size: 3.8em;
+    margin: 0;
+    color: #23201F;
+    font-family: 'Abhaya Libre', serif;
+}
+.text-content p {
+    display: block; /* Make the border shorter and only as wide as the content */
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.text-content p::after {
+    content: "";
+    display: block;
+    width: 60%; /* Make the border half the width of the paragraph */
+    height: 0.82px; 
+    background-color: #F7F7E6; 
+    margin: 0 auto; /* Center the border horizontally */
+    margin-top: 35px; 
+    margin-right:243px;
+}
+
+.get-in-touch-btn {
+    display: inline-block;
+    margin-top: 20px; 
+    padding: 13px 24px;
+    font-size: 1.2em;
+    background-color: #EB7442; 
+    color: #23201F;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.get-in-touch-btn:hover {
+    background-color: #F7F7E6; 
+    color: #23201F;
+}
+
+.text-content2 {
+    position: absolute;
+    top: 63%; 
+    left: 72%; 
+    color: #F7F7E6;
+    text-align: left;
+    z-index: 11; /* text is on top of the image */
+}
+.skill-btn {
+    display: inline-block;
+    margin-top: -20px; 
+    margin-bottom: 40px;
+    margin-right: 7px;
+    padding: 9px 12px;
+    font-size: 0.8em;
+    background-color: #F7F7E6; 
+    color: #23201F;
+    border: none;
+    border-radius: 40px;    
+}
+.text-content2 h2 {
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #23201F;
+    font-family: 'Abhaya Libre', serif;
+}
+.tool-btn {
+    background-color: #EB7442; 
+}
+
+
+/*----------------section 2 - education-----------------*/
+.education-section {
+    min-height: 90vh;
+    font-family: 'Abhaya Libre', serif;
+    background-color: #F7F7E6;
+    color: #EB7442;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.education-section h1 {
+    color: #EB7442;
+    font-size: 3.8em;
+    margin-top: 10px;
+}
+
+.education-period {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* content starts from the same point */
+    width: 100%; 
+    margin-bottom: 80px;
+    margin-left: 500px;
+}
+
+.education-period h2 {
+    font-size: 45px;
+    color: #23201F;
+    margin-right: 40px; 
+    white-space: nowrap;
+}
+
+.uni-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-left: 50px;
+}
+
+.uni-info p, .uni-info .major {
+    margin: 0; 
+    color: #23201F;
+    font-size: 45px; 
+}
+
+.uni-info .major {
+    font-size: 32px; 
+    color: #5A5A5A; 
+    margin-top: 5px; 
+}
+
+
+/* wiggling animation for Education */
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+}
+
+.education-section h1 {
+    animation: wiggle 2s linear infinite;
+}
+
+
+/*navigation change color by scroling */
+.dark-nav {
+    border-bottom: 1px solid rgba(34, 34, 13, 0.7);
+}
+.dark-nav .navigation a {
+    color: #23201F;    
+}
+.dark-nav-section3 {
+    border-bottom: 1px solid #F7F7E6;
+}
+.dark-nav-section3 .navigation a{
+    color: #F7F7E6;  
+}
+
+
+/*-------------------section 3 Strength & Weakness-------------------*/
+.strength, .weakness {
+    font-size: 28px;
+    flex: 1;
+    margin: 10px; 
+}
+.weakness {
+   margin-right: 30px;
+}
+
+.personality-section {
+    min-height: 60vh;
+    display: flex;
+    font-family: 'Abhaya Libre', serif;
+    color: #F7F7E6;
+    justify-content: space-around; 
+    align-items: flex-start; 
+    padding: 10px;
+    margin-left: 175px;
+    position: relative;
+}
+.personality-section::before {
+    content: ""; /* Empty content to make it visible */
+    position: absolute;
+    top: 10%;
+    bottom: 5%;
+    left: 43%; 
+    width: 0.9px; 
+    background-color: #F7F7E6; 
+    transform: translateX(-50%); /* Centers the border properly */
+}
+
+.personality-section h1 {
+    font-size: 80px;
+    margin-bottom: 10px; 
+}
+
+.personality-section ul {
+    padding-left: 20px; 
+}
+.personality-section li {
+    padding-top: 10px;
+}
+
+.language-section {
+    font-family: 'Abhaya Libre', serif;
+    text-align: center;
+    padding: 10px;
+    margin-top: -10px; 
+    margin-bottom: 60px; /*space between section3 and section4*/
+}
+
+.languages {
+    display: flex; 
+    justify-content: center; /* Centers the language blocks */
+    gap: 40px; /* Space between each language block */
+    text-align: center;
+}
+
+.language-section h1 {
+    font-size: 50px;
+    color: #F7F7E6;
+    margin-bottom: 10px; 
+}
+
+.language {
+    display: flex; 
+    align-items: center; 
+    margin-left: 60px;
+}
+
+.lang-name {
+    font-size: 35px;
+    color: #F7F7E6; 
+    margin-right: 5px;
+}
+
+.lang-detail {
+    font-size: 20px;
+    color: #D7D4C8;
+}
+
+
+/*-----------------section 4 Contact------------------*/
+.contact-section {
+    font-family: 'Abhaya Libre', serif;
+    background-color: #23201F;
+    min-height: 76vh;
+    padding: 40px 20px;
+}
+.contact h1 {
+    color: #F7F7E6;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 50px;
+}
+.email {
+    color: #F7F7E6;
+    font-size: 28px;
+    text-align: center;
+}
+
+.social-medias {
+    display: flex;
+    justify-content: center; 
+    gap: 35px;
+    margin-top: 80px;
+}
+.social-medias div a {
+    color: #F7F7E6; /* icon color */
+    font-size: 45px; /* icon size */
+}
+
+
+/*-------------------section 1 responsive 1024-------------------*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        margin-left: 2vw;
+        font-size: 4vw;
+    }
+
+    .navigation ul {
+        align-items: center;
+        margin-right: 30vw;
+    }
+
+    .navigation li {
+        margin-left: 20px;
+    }
+
+    .navigation a {
+        font-size: 2vw;
+    }
+
+    .section1, .section2, .section3, .section4 {
+        padding: 2vw 0vw;
+    }
+
+    .section1 {
+        margin-top: 18vw;
+        min-height: 83dvh;
+    }
+    
+    .image-container {
+        width: 100%; 
+        margin-top: -50px;
+        margin-bottom: 20px;
+    }
+    
+    .centered-image {
+        width: 100%; 
+        max-width: 53vw; 
+        height: auto; 
+        margin-left: -45vw;
+    }
+    
+    .text-content {
+        position: absolute;
+        top:60%; 
+        left: 75%;
+    }
+    .text-content h2 {
+        font-size: 8vw;
+        margin: 0;
+    }
+    .text-content p {
+        display: block; 
+        font-size: 3.5vw;
+        margin-top: 1vw;
+        width: 37vw;
+    }
+    .text-content p::after {
+        display: block;
+        width:100%; 
+        height: 0.82px; 
+        margin: 0 auto; 
+        margin-top: 4vw; 
+        margin-right:50vw;
+    }
+    
+    .get-in-touch-btn {
+        display: inline-block;
+        margin-top: 1vw; 
+        padding: 2vw 2.3vw;
+        font-size: 1.5rem;
+    }
+
+    .text-content2 {
+        position: absolute;
+        top: 72%; 
+        left: 7%; 
+    }
+    .skill-btn {
+        font-size: 2vw;  
+    }
+    .text-content2 h2 {
+        font-size: 4.8vw;
+    }
+   
+}
+
+
+/*-------------------section 2 responsive 1024-------------------*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .education-section h1  {
+        font-size: 5rem;
+    }
+    .education-section h2 {
+        font-size: 3rem;
+    }
+
+    .education-period {
+        flex-direction: column;
+        margin-left: 3vw;
+    }
+  
+    .uni-info p, .uni-info .major {
+        font-size: 3rem; 
+    }
+    .uni-info .fanshawe {
+        margin-left: 8vw;
+    }
+    .uni-info .major {
+        font-size: 2rem; 
+    }
+}
+
+
+
+/*-------------------section 3 responsive 1024-------------------*/
+@media (min-width: 769px) and (max-width: 1024px) {
+.strength, .weakness {
+    font-size: 2.3rem;
+    margin: 2vw; 
+}
+
+.personality-section {
+    min-height: 60dvh;
+    flex-direction: column;
+}
+
+.personality-section::before {
+    top: 59%;
+    left: -10%; 
+    width: 100%; 
+    height: 1px;
+    transform: translateY(-50%); 
+}
+.personality-section ul {
+    margin-left: -50px;
+}
+
+.personality-section h1 {
+    font-size: 5rem;
+    margin-left: -30px;
+}
+
+.languages {
+    gap: 10px;
+}
+
+.language-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2vw; 
+}
+
+.language {
+    margin-left: 1vw;
+}
+
+.lang-name {
+    font-size: 2rem;
+}
+
+.lang-detail {
+    font-size: 1.3rem;
+}
+}
+
+
+
+/*-------------------section 4  responsive 1024-------------------*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact-section {
+        min-height: 45dvh;
+    }
+    .contact h1 {
+        font-size: 4rem;
+    }
+    .email {
+        font-size: 2rem;
+    }
+
+    .social-medias {
+      gap: 60px;
+    }
+    .social-medias div a {
+        font-size: 2.5rem; 
+    }
+}
+
+
+
+
+/*-------------------section 1 responsive 768-------------------*/
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        margin-left: 2vw;
+        font-size: 6vw;
+    }
+
+    .navigation ul {
+        align-items: center;
+        margin-right: 30vw;
+    }
+
+    .navigation li {
+        margin-left: 20px;
+    }
+
+    .navigation a {
+        font-size: 2vw;
+    }
+
+    .section1, .section2, .section3, .section4 {
+        padding: 2vw 0vw;
+    }
+
+    .tickerwrapper {
+        padding-top: 10vw;
+        width: 225vw;
+    }
+
+    .section1 {
+        margin-top: 18vw;
+        min-width: 100dvh;
+        min-height: 240dvh;
+    }
+    
+    .image-container {
+        width: 100%; 
+        margin-top: -100px;
+        margin-bottom: 30vw;
+    }
+    
+    .centered-image {
+        width: 100%; 
+        max-width: 180vw; 
+        height: auto; 
+        margin-left: 3vw;
+    }
+    
+    .text-content {
+        position: absolute;
+        top:150%; 
+        left: 120%;
+        text-align: center;
+    }
+    .text-content h2 {
+        font-size: 30vw;
+        margin: 0;
+        margin-top: 10vw;
+        color: #F7F7E6;
+    }
+    .text-content p {
+        display: block;
+        font-size: 10vw;
+        margin-top: 1vw;
+        width:200vw;
+    }
+    .text-content p::after {
+        height: 0px; 
+    }
+    
+    .get-in-touch-btn {
+        margin-top: 10vw; 
+        padding: 4vw 5vw; 
+        font-size: 8vw; 
+        position: relative; 
+        left: 18%;
+        transform: translateX(-50%); 
+        bottom: 0; 
+    }
+
+    .text-content2 {
+        position: absolute;
+        text-align: center;
+        top: 195%; 
+        left: 17%; 
+        width: 200vw;
+    }
+    .skill-btn {
+        font-size: 10vw;  
+    }
+    .text-content2 h2 {
+        font-size: 18vw;
+        margin-bottom: 10vw;
+    }
+   
+}
+
+
+/*-------------------section 2 responsive 768-------------------*/
+@media (max-width: 768px) {
+    .education-section {
+        min-width: 100dvh;
+        min-height: 150dvh;
+    }
+    .education-section h1  {
+        font-size: 25vw;
+    }
+    .education-section h2 {
+        font-size: 18vw;
+    }
+
+    .education-period {
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+  
+    .uni-info p, .uni-info .major {
+        font-size: 18vw; 
+    }
+    .uni-info p {
+        margin-right: 0vw;
+    }
+    .uni-info .fanshawe {
+        margin-left: 35vw;
+    }
+    .uni-info .major {
+        font-size: 12vw;
+    }
+}
+
+
+
+/*-------------------section 3 responsive 768-------------------*/
+@media (max-width: 768px) {
+.strength, .weakness {
+    font-size: 18vw;
+    margin: 2vw; 
+}
+
+.personality-section {
+    min-width: 80dvh;
+    min-height: 100dvh;
+    flex-direction: column;
+}
+
+.personality-section::before {
+    top: 61%;
+    left: -10%; 
+    width: 100%; 
+    height: 0.3vw;
+    transform: translateY(-50%); 
+}
+.personality-section ul {
+    margin-left: -50px;
+}
+
+.personality-section h1 {
+    font-size: 25vw;
+    margin-left: -25px;
+}
+
+.languages {
+    gap: 1vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language-section {
+    min-width: 100dvh;
+ 
+  
+}
+
+.language-section h1 {
+    font-size: 22vw;
+    margin-bottom: 2vw; 
+}
+
+.language {
+    margin-left: 1vw;
+    margin-bottom: -12vw;
+}
+
+.lang-name {
+    font-size: 18vw;
+}
+
+.lang-detail {
+    font-size: 10vw;
+}
+}
+
+
+
+/*-------------------section 4  responsive 768-------------------*/
+@media (max-width: 768px) {
+    .contact-section {
+        min-height: 75dvh;
+        min-width: 100dvh;
+    }
+    .contact h1 {
+        font-size: 25vw;
+    }
+    .email {
+        font-size: 12vw;
+    }
+
+    .social-medias {
+      gap: 12vw;
+    }
+    .social-medias div a {
+        font-size: 16vw; 
+    }
+}
